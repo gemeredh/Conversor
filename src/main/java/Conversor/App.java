@@ -1,13 +1,18 @@
 package Conversor;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import Conversor.Gui.*;
+
+import javax.swing.SwingUtilities;
+public class App extends Inicio{
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                Inicio conversor = new Inicio();
+                conversor.iniciar();
+            }
+        });
+
     }
 }
+
